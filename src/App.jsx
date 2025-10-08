@@ -1,19 +1,18 @@
 import "./App.css";
 import Footer from "./components/Footer";
 import Banner from "./components/Banner";
-import Link from "./components/Link";
-import links from "./utilities/Links";
-import styleGn from "./styles/StyleGr.module.css";
+import IteraLinks from "./components/IteraLinks";
+import CasseBackground from "./components/CasseBackground";
+import Welcome from "./components/Welcome";
 
 function App() {
   return (
     <>
+
+      <CasseBackground />
       <Banner />
-      <div className={styleGn.linkContainer}>
-        {links.map((link, index) => (
-          <Link key={index} name={link.name} url={link.url} />
-        ))}
-      </div>
+      <Welcome />
+      <IteraLinks />
       <Footer />
     </>
   );

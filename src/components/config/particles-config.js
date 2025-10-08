@@ -1,8 +1,8 @@
-const amoungUS = {
+const particlesConfig = {
   autoPlay: true,
   background: {
     color: {
-      value: "#000000",
+      value: "#000",
     },
     image: "",
     position: "",
@@ -25,7 +25,7 @@ const amoungUS = {
   delay: 0,
   fullScreen: {
     enable: true,
-    zIndex: -1,
+    zIndex: 1,
   },
   detectRetina: true,
   duration: 0,
@@ -44,8 +44,8 @@ const amoungUS = {
         type: "circle",
       },
       onHover: {
-        enable: false,
-        mode: [],
+        enable: true,
+        mode: "trail",
         parallax: {
           enable: false,
           force: 2,
@@ -59,9 +59,44 @@ const amoungUS = {
     },
     modes: {
       trail: {
-        delay: 1,
-        pauseOnStop: false,
-        quantity: 1,
+        delay: 0.005,
+        pauseOnStop: true,
+        quantity: 5,
+        particles: {
+          color: {
+            value: "#ff0000",
+            animation: {
+              enable: true,
+              speed: 400,
+              sync: true,
+            },
+          },
+          collisions: {
+            enable: false,
+          },
+          links: {
+            enable: false,
+          },
+          move: {
+            outModes: {
+              default: "destroy",
+            },
+            speed: 2,
+          },
+          size: {
+            value: {
+              min: 1,
+              max: 5,
+            },
+            animation: {
+              enable: true,
+              speed: 5,
+              sync: true,
+              startValue: "min",
+              destroy: "max",
+            },
+          },
+        },
       },
       attract: {
         distance: 200,
@@ -181,15 +216,15 @@ const amoungUS = {
       },
     },
     color: {
-      value: "#fff",
+      value: "#ff0000",
       animation: {
         h: {
           count: 0,
-          enable: false,
-          speed: 1,
+          enable: true,
+          speed: 50,
           decay: 0,
           delay: 0,
-          sync: true,
+          sync: false,
           offset: 0,
         },
         s: {
@@ -218,44 +253,11 @@ const amoungUS = {
       options: {},
       type: [],
     },
-    groups: {
-      z5000: {
-        number: {
-          value: 70,
-        },
-        zIndex: {
-          value: 50,
-        },
-      },
-      z7500: {
-        number: {
-          value: 30,
-        },
-        zIndex: {
-          value: 75,
-        },
-      },
-      z2500: {
-        number: {
-          value: 50,
-        },
-        zIndex: {
-          value: 25,
-        },
-      },
-      z1000: {
-        number: {
-          value: 40,
-        },
-        zIndex: {
-          value: 10,
-        },
-      },
-    },
+    groups: {},
     move: {
       angle: {
         offset: 0,
-        value: 10,
+        value: 90,
       },
       attract: {
         distance: 200,
@@ -273,7 +275,7 @@ const amoungUS = {
       },
       decay: 0,
       distance: {},
-      direction: "right",
+      direction: "none",
       drift: 0,
       enable: true,
       gravity: {
@@ -299,7 +301,7 @@ const amoungUS = {
       },
       random: false,
       size: false,
-      speed: 5,
+      speed: 2,
       spin: {
         acceleration: 0,
         enable: false,
@@ -315,7 +317,7 @@ const amoungUS = {
     },
     number: {
       density: {
-        enable: false,
+        enable: true,
         width: 1920,
         height: 1080,
       },
@@ -323,14 +325,17 @@ const amoungUS = {
         mode: "delete",
         value: 0,
       },
-      value: 200,
+      value: 100,
     },
     opacity: {
-      value: 1,
+      value: {
+        min: 0.3,
+        max: 0.8,
+      },
       animation: {
         count: 0,
-        enable: false,
-        speed: 2,
+        enable: true,
+        speed: 0.5,
         decay: 0,
         delay: 0,
         sync: false,
@@ -358,11 +363,14 @@ const amoungUS = {
       type: "circle",
     },
     size: {
-      value: 3,
+      value: {
+        min: 1,
+        max: 3,
+      },
       animation: {
         count: 0,
-        enable: false,
-        speed: 5,
+        enable: true,
+        speed: 3,
         decay: 0,
         delay: 0,
         sync: false,
@@ -375,8 +383,8 @@ const amoungUS = {
       width: 0,
     },
     zIndex: {
-      value: 5,
-      opacityRate: 0.5,
+      value: 0,
+      opacityRate: 1,
       sizeRate: 1,
       velocityRate: 1,
     },
@@ -483,11 +491,11 @@ const amoungUS = {
     links: {
       blink: false,
       color: {
-        value: "#fff",
+        value: "random",
       },
       consent: false,
       distance: 100,
-      enable: false,
+      enable: true,
       frequency: 1,
       opacity: 1,
       shadow: {
@@ -520,72 +528,7 @@ const amoungUS = {
   style: {},
   themes: [],
   zLayers: 100,
-  emitters: {
-    autoPlay: true,
-    fill: true,
-    life: {
-      wait: false,
-    },
-    rate: {
-      quantity: 1,
-      delay: 7,
-    },
-    shape: {
-      options: {},
-      replace: {
-        color: false,
-        opacity: false,
-      },
-      type: "square",
-    },
-    startCount: 0,
-    size: {
-      mode: "percent",
-      height: 0,
-      width: 0,
-    },
-    particles: {
-      shape: {
-        type: "images",
-        options: {
-          images: {
-            src: "https://particles.js.org/images/cyan_amongus.png",
-            width: 500,
-            height: 634,
-          },
-        },
-      },
-      size: {
-        value: 40,
-      },
-      move: {
-        speed: 10,
-        outModes: {
-          default: "none",
-          right: "destroy",
-        },
-        straight: true,
-      },
-      zIndex: {
-        value: 0,
-      },
-      rotate: {
-        value: {
-          min: 0,
-          max: 360,
-        },
-        animation: {
-          enable: true,
-          speed: 10,
-          sync: true,
-        },
-      },
-    },
-    position: {
-      x: -5,
-      y: 55,
-    },
-  },
+  emitters: [],
   motion: {
     disable: false,
     reduce: {
@@ -595,4 +538,4 @@ const amoungUS = {
   },
 };
 
-export default amoungUS;
+export default particlesConfig;
