@@ -6,7 +6,7 @@ export default function WelcomeDev() {
   return (
     <>
     <img className={styleGn.bannerImage} src={banner} alt="banner" />
-    <div className={styleGn.bannerText}>Welcome Dev! 💚🔥</div>
+    <div className={styleGn.bannerText}>Welcome Dev! 💚🔥 @iamcasse 🔥</div>
     </>
   )
 }
