@@ -11,7 +11,7 @@ Una aplicación web moderna que actúa como una página de enlaces personalizada
 - ✨ **Efectos de partículas** interactivos usando TSParticles
 - ⌨️ **Efecto de máquina de escribir** para texto dinámico
 - 📱 **Diseño responsivo** adaptable a diferentes dispositivos
-- 🔗 **Enlaces sociales** organizados de manera atractiva
+- 🔗 **Enlaces sociales** organizados de manera atractivamdoc
 - 🚀 **Rendimiento optimizado** con Vite
 
 ## 🛠️ Tecnologías Utilizadas
