@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 body,
 html,
 #root {
@@ -31,22 +31,20 @@ html,
   padding: 10px;
 }
 
-.linkBox{
-    padding: 10px 20px;
-    border: 2px solid rgb(0, 255, 145);
-    border-radius: 8px;
-    background-color: rgba(0, 255, 145, 0.1);
-    transition: background-color 0.3s, transform 0.3s;
-    font-size: 1em;
-    font-weight: 500;
+.linkBox {
+  padding: 10px 20px;
+  border: 2px solid rgb(0, 255, 145);
+  border-radius: 8px;
+  background-color: rgba(0, 255, 145, 0.1);
+  transition: background-color 0.3s, transform 0.3s;
+  font-size: 1em;
+  font-weight: 500;
 }
 
 .linkBox:hover {
-    background-color: rgba(0, 255, 145, 0.365);
-    transform: scale(1.09);
+  background-color: rgba(0, 255, 145, 0.365);
+  transform: scale(1.09);
 }
-
-
 
 .linkURLYoutube {
   color: rgb(255, 0, 0);
@@ -73,17 +71,20 @@ html,
   text-decoration: none;
 }
 
+.linkURLDiscord {
+  color: rgb(100, 100, 255);
+  text-decoration: none;
+}
+
 .linkContainer {
   margin: 10px 0;
   padding: 10px;
 }
 
-
-
 /* annimation */
 
 .typewriter {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   /* font-family: "Montserrat", sans-serif; */
   /* font-family: "Krona One", sans-serif; */
   color: #11c757;
@@ -101,16 +102,18 @@ html,
 }
 
 @keyframes blink {
-  0%, 50%, 100% {
+  0%,
+  50%,
+  100% {
     opacity: 1;
   }
-  25%, 75% {
+  25%,
+  75% {
     opacity: 0;
   }
 }
 
 /* nanimation */
-
 
 .footer {
   margin-top: auto;
