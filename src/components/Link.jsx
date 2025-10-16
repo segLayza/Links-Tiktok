@@ -13,7 +13,7 @@ function Link({ name, url }) {
               ? styleGn.linkURKick
               : name == "twitch"
               ? styleGn.linkURLTwitch
-              : name == "tiktok"
+              : name == "tiktok2"
               ? styleGn.linkURLTikTok
               : name == "discord"
               ? styleGn.linkURLDiscord
